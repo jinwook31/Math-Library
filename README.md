@@ -8,6 +8,8 @@ LAPACK은 driver routine을 갖고 low-level 컴퓨팅부터 보조 시스템을
 
 LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 
+![structure](http://people.eecs.berkeley.edu/~demmel/cs267/lecture12/ScaLAPACK.gif)
+
 
 ###Levels of Routines
 
@@ -116,13 +118,12 @@ ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의�
 
 	  LAPACK++, Armadillo, IT++
 
- * OCaml
-
-	  Lacaml
-
  * JAVA
 
-	  
+
+ *OCaml
+
+	Lacaml	  
 
 
 
