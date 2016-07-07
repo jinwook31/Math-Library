@@ -65,24 +65,27 @@ BLAS(**B**asic **L**inear **A**lgebra **S**ubprograms)은 벡터합, 스칼라�
 BLAS는 주로 특수 부동소수점 하드웨어 같은 특정 장치(vector register, SIMD)에 최적화시켜 속도를 높이는데 사용된다. BLAS는 3단계로 되어있다.
 
 #####Level 1
-BLAS의 초기 루틴을 모두 갖고 있다. 즉, strided array(dot product, vector-norm)의 vector 연산을 다룬다. linear time을 소요한린다.
+```
+BLAS의 초기 루틴을 모두 갖고 있다. 즉, strided array(dot product, vector-norm)의 vector 연산을 다룬다. linear time을 소요한다.
 
 ![equation1](https://wikimedia.org/api/rest_v1/media/math/render/svg/1016203a2d42763e37d205e26e35a740a5fe53e5)
-
+```
 
 #####Level 2
+```
 이 레벨에서는 일반적인 벡터 행렬의 곱같은 matrix-vector operations을 다룬다. 시간은 quadratic time만큼 사용한다.
 
 ![equation2](https://wikimedia.org/api/rest_v1/media/math/render/svg/7658d5f7f6154333ccab6b64baa66163e5ef8d6f)
 
 level1에서 matrix-vector연산을 컴파일러로 부터 숨겼던 것을 개선 하여 level2 개발로 인해 vector processor의 성능이 향상되었다.
-
+```
 
 #####Level 3
+```
 이 레벨에서는 matrix-matrix operation을 다룬다. 시간은 cubic time만큼 걸린다.
 
 ![equation3](https://wikimedia.org/api/rest_v1/media/math/render/svg/7f4f772e55eb95e54083f3bc4a177e171c4f7cdc)
-
+```
 
 또한, BLAS는 이식성이 좋기 때문에 LAPACK에서는 BLAS 인터페이스를 적용하였다. Level1은 LAPACK에서 성능보다는 편의를 위해 사용되었다. 
 Level2는 많은 single vector processor들에서 좋은 성능을 보였지만, 그렇지 않은 processor에서는 메모리, 캐시 등에서 한계가 있었다.
