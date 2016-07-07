@@ -5,7 +5,15 @@ Cache-based architecture 형식의 BLAS 인터페이스를 이용하여 개발�
 
 LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다. BSD style license를 가지고, 일부를 제외하고는 무료 SW 이다.
 
+###Naming scheme
+LAPACK의 subroutine은 Fortran때의 식별자 제한으로 짧고, 이해하기 어려운 형식을 갖고 있다.
 
+LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
+*`p`는 
 
-[참조]:https://en.wikipedia.org/wiki/LAPACK
+*`mm`
+
+*`aaa`
+
+[참조][https://en.wikipedia.org/wiki/LAPACK]
