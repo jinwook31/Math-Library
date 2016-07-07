@@ -38,7 +38,7 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 	  low-level 컴퓨팅에 주로 사용되는 것으로 행렬의 크기, matrix-norm 연산 등 subtask의 블록 알고리즘 
 	
 
-###Data Types and Percision
+###Data Types and Precision
 
 LAPACK은 실수와 복소수 data type을 이용할 수 있다. 몇가지 기능들을 제외하면 거의 모든 기능들이 두 타입 모두 제공된다.
 또한, 단정도와 배정밀도 버젼도 각각 존재하는데 배정밀도 버젼은 자동적으로 수행된다. 복소수 행렬의 배정밀도 루틴은 Fortan의
@@ -49,7 +49,7 @@ COMPLEX*16의 데이터 타입으로 사용되어야 한다.
 LAPACK의 subroutine은 Fortran때의 식별자 제한으로 짧고, 이해하기 어려운 형식을 갖고 있다.
 LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
- * `p`는 어떤 종류의 상수가 사용되었는지 표시한다. S,D는 실수형을 의미하고, C,Z는 복소수를 의미한다.
+ * `p`는 어떤 종류의 상수가 사용되었는지 표시한다. S,D는 실수형을 의미하고 C,Z는 복소수를 의미한다.
    LAPACK95부터는 더 구체적인 data type을 위해 generic subroutine을 사용한다.
 
  * `mm`은 알고리즘의 결과로 반환될 행렬의 종류를 표시한다. 
@@ -57,11 +57,6 @@ LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
  * `aaa`는 subroutine 안에 정의된 알고리즘에 대한 정의이다. 예를 들면, SV는 linear system을 해결하는 알고리즘, R은 rank-1 update 알고리즘이다.
 
 즉, `SGEBRD`는 실수형 행렬의 Bidiagonal Reduction을 제공하는 단정도 알고리즘이고, `DGESV`는 일반적인 배정밀도 실수 행렬의 linear system을 해결하는 알고리즘이다.
-
-
-
-###Functions
-
 
 
 
