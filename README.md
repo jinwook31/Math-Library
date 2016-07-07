@@ -103,6 +103,9 @@ Scalable LAPACK으로 MIMD 병렬 컴퓨터를 위한 LAPACK의 subset이다. �
 ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의존한다. band와 packed matrix는 제공하지 않고, SVD, QR, D&C SVD등 몇몇 
 고급 알고리즘들이 빠져 있다.
 
+ScaLAPCK은 BLACS(Basic Linear Algebra Communication Subroutine)을 이용하여 행렬 데이터를 message passing방식으로 송수신하는 라이브러리도 사용한다.
+BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 여러 플랫폼 간에 통신이 가능하다.
+
 
 
 ###다른 언어에서의 사용
@@ -136,3 +139,5 @@ ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의�
 [http://www.netlib.org/lapack/lug/node1.html]
 
 [https://www8.cs.umu.se/kurser/5DV050/VT08/utdelat/F7.pdf]
+
+[http://people.eecs.berkeley.edu/~demmel/cs267/lecture12/lecture12.html]
