@@ -120,6 +120,11 @@ ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의�
 
 	  Lacaml
 
+ * JAVA
+
+	  
+
+
 
 [참조]
 
@@ -128,3 +133,5 @@ ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의�
 [https://en.wikipedia.org/wiki/LAPACK]
 
 [http://www.netlib.org/lapack/lug/node1.html]
+
+[https://www8.cs.umu.se/kurser/5DV050/VT08/utdelat/F7.pdf]
