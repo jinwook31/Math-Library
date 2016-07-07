@@ -11,7 +11,7 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 
 ###Levels of Routines
 
- * **driver**
+ * **driver routine**
 	
 	  선형식, 실수형 행렬의 고유치를 계산등 완전한 문제를 해결하는 알고리즘
 	- Linear Equations
@@ -20,7 +20,7 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 	- Standard Eigenvalue and Singular Value Problems
 	- Generalized Eigenvalue and Singular Value Problems
  
- * **computational**
+ * **computational routine**
 	
 	  LU 인수 분해, 일반 실수형 행렬을 tridiagonal 행렬로 줄이는 연산 등의 명확한 작업을 할때 직접적으로 사용되는 알고리즘
 	- Linear Equations
@@ -33,7 +33,7 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 	- Generalized Nonsymmetric Eigenproblems
 	- Generalized (or Quotient) Singular Value Decomposition
 
- * **auxiliary**
+ * **auxiliary routine**
 	
 	  low-level 컴퓨팅에 주로 사용되는 것으로 행렬의 크기, matrix-norm 연산 등 subtask의 블록 알고리즘 
 	
@@ -47,7 +47,6 @@ COMPLEX*16의 데이터 타입으로 사용되어야 한다.
 
 ###Naming scheme
 LAPACK의 subroutine은 Fortran때의 식별자 제한으로 짧고, 이해하기 어려운 형식을 갖고 있다.
-
 LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
  * `p`는 어떤 종류의 상수가 사용되었는지 표시한다. S,D는 실수형을 의미하고, C,Z는 복소수를 의미한다.
@@ -62,7 +61,18 @@ LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
 
 ###BLAS
+BLAS(**B**asic **L**inear **A**lgebra **S**ubprograms)은 벡터합, 스칼라곱, 행렬 곱등 기본적인 선형대수 문제를 해결하는 low-level routine의 집합이다.
+BLAS는 주로 특수 부동소수점 하드웨어 같은 특정 장치(vector register, SIMD)에 최적화시켜 속도를 높이는데 사용된다. 
 
+BLAS는 3단계로 구성되어있는데,
+#####Level 1
+
+#####Level 2
+
+#####Level 3
+
+
+LAPACK에서는 BLAS 인터페이스를 이용하여 연산 속도와 Cache를 효율적으로 사용하도록 하였다. 
 
 
 ###ScaLAPACK
@@ -87,5 +97,9 @@ LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
 
 [참조]
+
+[https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms]
+
 [https://en.wikipedia.org/wiki/LAPACK]
+
 [http://www.netlib.org/lapack/lug/node1.html]
