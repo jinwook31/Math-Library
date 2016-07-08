@@ -37,7 +37,8 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 
  * **auxiliary routine**
 	
-	  low-level 컴퓨팅에 주로 사용되는 것으로 행렬의 크기, matrix-norm 연산 등 subtask의 블록 알고리즘 
+	  low-level 컴퓨팅에 주로 사용되는 것으로 행렬의 크기, matrix-norm 연산 등 subtask의 블록 알고리즘
+	  block algorithm형식을 이용하면 다양한 컴퓨터에 적용 가능하다.
 	
 
 ###Data Types and Precision
