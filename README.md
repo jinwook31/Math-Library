@@ -61,6 +61,9 @@ LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
 즉, `SGEBRD`는 실수형 행렬의 Bidiagonal Reduction을 제공하는 단정도 알고리즘이고, `DGESV`는 일반적인 배정밀도 실수 행렬의 linear system을 해결하는 알고리즘이다.
 
+ * LAPACK 함수 정리
+
+ [http://www.mathkeisan.com/UsersGuide/e/lapack.html]
 
 
 ###BLAS
@@ -97,6 +100,10 @@ BLAS와 LAPACK의 관계는 BLAS에서는 가장 기본적인 연산, low-level�
 
 BLAS도 Fortran이였으므로 LAPACK과 비슷하지만 operation code가 1개 줄어든 `pmmaa` 방식을 따른다.
 
+ * BLAS 함수 정리
+
+ [http://www.netlib.org/lapack/lug/node145.html]
+
 
 ###ScaLAPACK
 
@@ -130,6 +137,11 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 
 	Lacaml	  
 
+ * 확장 라이브러리
+
+	Intel Math Kernel Lib, IBM Engineering and Scientific Subroutine Lib, CUDA
+
+
 
 ###속도 및 성능 비교
 
@@ -137,8 +149,11 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 
 	Fortran은 계산을 위한 프로그래밍 언어로 C로 돌렸을 때 보다 5배 빠르다.
 
+ * Fortran은 Column, C/C++은 Row 방식으로 메모리에  정렬이 된다. 그렇기 때문에  C/C++에서 BLAS, LAPACK 함수를 호출하면 뒤집어야한다.
+   그 때문에 속도 차이가 생긴다.
 
- * OS, CPU에 따라서도 많이 바뀜
+ * OS, CPU에 따라서도 많이 바뀐다.
+
 
 
 [참조]
