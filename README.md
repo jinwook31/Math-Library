@@ -124,8 +124,9 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 
  * JAVA
 
+	JLAPACK
 
- *OCaml
+ * OCaml
 
 	Lacaml	  
 
