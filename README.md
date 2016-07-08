@@ -131,8 +131,19 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 	Lacaml	  
 
 
+###속도 및 성능 비교
+
+ * 계산 속도 : Fortran >> C > C++
+
+	Fortran은 계산을 위한 프로그래밍 언어로 C로 돌렸을 때 보다 5배 빠르다.
+
+
+ * OS, CPU에 따라서도 많이 바뀜
+
 
 [참조]
+
+[http://www.mitchr.me/SS/exampleCode/blas.html]
 
 [https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms]
 
