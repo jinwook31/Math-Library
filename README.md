@@ -135,7 +135,7 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 
  * OCaml
 
-	Lacaml	  
+	Lacaml
 
  * 확장 라이브러리
 
@@ -145,14 +145,10 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 
 ###언어별 속도 및 성능 비교
 
- * 계산 속도 : Fortran >> C > C++
-
-	Fortran은 계산을 위한 프로그래밍 언어로 C로 돌렸을 때 보다 5배 빠르다.
-
  * Fortran은 Column, C/C++은 Row 방식으로 메모리에  정렬이 된다. 그렇기 때문에  C/C++에서 BLAS, LAPACK 함수를 호출하면 뒤집어야한다.
-   그 때문에 속도 차이가 생긴다.
+   그 때문에 약간의 속도 차이가 생긴다.
 
- * OS, CPU에 따라서도 많이 바뀐다.
+ * 사용 언어보다 CPU, Memory 등의 영향을 제일 많이 받는다.
 
 
 
