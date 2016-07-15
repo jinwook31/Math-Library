@@ -114,6 +114,9 @@ ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의�
 ScaLAPCK은 BLACS(Basic Linear Algebra Communication Subroutine)을 이용하여 행렬 데이터를 message passing방식으로 송수신하는 라이브러리도 사용한다.
 BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 여러 플랫폼 간에 통신이 가능하다.
 
+ * 함수 정리
+
+ [http://www.netlib.org/scalapack/explore-html/index.html]
 
 
 ###다른 언어에서의 사용
