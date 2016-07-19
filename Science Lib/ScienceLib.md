@@ -35,4 +35,5 @@
 	총 474개의 class가 있고, 함수들은 간단히 행렬 이름 1개만으로 호출하거나, 연산 할 값들을 이용하여 호출한다.
 
 	[http://arma.sourceforge.net/docs.html]
+
 	[http://arma.sourceforge.net/armadillo_joss_2016.pdf] 
