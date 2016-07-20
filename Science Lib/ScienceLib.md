@@ -18,7 +18,7 @@
  * GNU Scientific Library
 
 	이 라이브러리는 C에서 가장 많이 쓰이는 수학, 과학 분석 라이브러리이다. 선형대수, Blas support, Eigensystem 등 넓게 지원하며
-	Blas, ATLAS, LUSH등을 이용하여 구현하였다. 다른 라이브러리와 별개이기 때문에 컴파일 및 설치가 쉽고, 총 2082개의 함수로 되어있다.
+	Blas, ATLAS, LUSH등을 이용하여 구현하였다. 다른 라이브러리와 별개이기 때문에 컴파일 및 설치가 쉽고, 총 1863개의 함수로 되어있다.
 
 	[https://www.gnu.org/software/gsl/manual/gsl-ref.pdf]
 
