@@ -1,4 +1,6 @@
-#LAPACK
+#Math Library
+
+###LAPACK
 LAPACK(**L**inear **A**lgebra **Pac**kage)은 수치적 선형대수의 연산을 수행하는 함수를 제공하는 표준 수치 해석 SW 라이브러리이다.
 LAPACK은 선형식, 선형 최소 제곱법을 제공하는 LINPACK과 고유값을 이용하는 EISPACK을 이용하여 개발되었고,
 Cache-based architecture 형식의 BLAS(**B**asic **L**inear **A**lgebra **S**ubprograms) 인터페이스를 이용하여 개발되어서 빠른 처리 속도를 제공한다.
