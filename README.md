@@ -1,6 +1,6 @@
-#Math Library
+# Math Library
 
-###LAPACK
+### LAPACK
 LAPACK(**L**inear **A**lgebra **Pac**kage)은 수치적 선형대수의 연산을 수행하는 함수를 제공하는 표준 수치 해석 SW 라이브러리이다.
 LAPACK은 선형식, 선형 최소 제곱법을 제공하는 LINPACK과 고유값을 이용하는 EISPACK을 이용하여 개발되었고,
 Cache-based architecture 형식의 BLAS(**B**asic **L**inear **A**lgebra **S**ubprograms) 인터페이스를 이용하여 개발되어서 빠른 처리 속도를 제공한다.
@@ -13,7 +13,7 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 ![structure](http://people.eecs.berkeley.edu/~demmel/cs267/lecture12/ScaLAPACK.gif)
 
 
-###Levels of Routines
+### Levels of Routines
 
  * **driver routine**
 	
@@ -43,14 +43,14 @@ LAPACK에서 더 확장된 것에는 ScaLAPACK, PLAPACK이 있다.
 	  block algorithm형식을 이용하면 다양한 컴퓨터에 적용 가능하다.
 	
 
-###Data Types and Precision
+### Data Types and Precision
 
 LAPACK은 실수와 복소수 data type을 이용할 수 있다. 몇가지 기능들을 제외하면 거의 모든 기능들이 두 타입 모두 제공된다.
 또한, 단정도와 배정밀도 버젼도 각각 존재하는데 배정밀도 버젼은 자동적으로 수행된다. 복소수 행렬의 배정밀도 루틴은 Fortran의
 COMPLEX*16의 데이터 타입으로 사용되어야 한다.
 
 
-###Naming scheme
+### Naming scheme
 LAPACK의 subroutine은 Fortran때의 식별자 제한으로 짧고, 이해하기 어려운 형식을 갖고 있다.
 LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
 
@@ -68,17 +68,17 @@ LAPACK subroutine 식별자의 형식은 `pmmaaa`로 되어있고,
  [http://www.mathkeisan.com/UsersGuide/e/lapack.html]
 
 
-###BLAS
+### BLAS
 BLAS(**B**asic **L**inear **A**lgebra **S**ubprograms)은 벡터합, 스칼라곱, 행렬 곱등 기본적인 선형대수 문제를 해결하는 low-level routine의 집합이다.
 BLAS는 주로 특수 부동소수점 하드웨어 같은 특정 장치(vector register, SIMD)에 최적화시켜 속도를 높이는데 사용된다. BLAS는 3단계로 되어있다.
 
-#####Level 1
+##### Level 1
 BLAS의 초기 루틴을 모두 갖고 있다. 즉, strided array(dot product, vector-norm)의 vector 연산을 다룬다. linear time을 소요한다.
 
 ![equation1](https://wikimedia.org/api/rest_v1/media/math/render/svg/1016203a2d42763e37d205e26e35a740a5fe53e5)
 
 
-#####Level 2
+##### Level 2
 
 이 레벨에서는 일반적인 벡터 행렬의 곱같은 matrix-vector operations을 다룬다. 시간은 quadratic time만큼 사용한다.
 
@@ -87,7 +87,7 @@ BLAS의 초기 루틴을 모두 갖고 있다. 즉, strided array(dot product, v
 level1에서 matrix-vector연산을 컴파일러로 부터 숨겼던 것을 개선 하여 level2 개발로 인해 vector processor의 성능이 향상되었다.
 
 
-#####Level 3
+##### Level 3
 이 레벨에서는 matrix-matrix operation을 다룬다. 시간은 cubic time만큼 걸린다.
 
 ![equation3](https://wikimedia.org/api/rest_v1/media/math/render/svg/7f4f772e55eb95e54083f3bc4a177e171c4f7cdc)
@@ -107,7 +107,7 @@ BLAS도 Fortran이였으므로 LAPACK과 비슷하지만 operation code가 1개 
  [http://www.netlib.org/lapack/lug/node145.html]
 
 
-###ScaLAPACK
+### ScaLAPACK
 
 Scalable LAPACK으로 MIMD 병렬 컴퓨터를 위한 LAPACK의 subset이다. 현재는 message passing방식의 Single-Program-Multiple-Data형식으로 되어 있다.
 ScaLAPACK은 LAPACK이 BLAS에 의존하듯 PBLAS(**P**arallel **BLAS**)에 의존한다. band와 packed matrix는 제공하지 않고, SVD, QR, D&C SVD등 몇몇 
@@ -121,7 +121,7 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
  [http://www.netlib.org/scalapack/explore-html/index.html]
 
 
-###다른 언어에서의 사용
+### 다른 언어에서의 사용
 
  * C
 
@@ -148,7 +148,7 @@ BLACS는 다른 message passing 라이브러리(PVM, MPI 등)을 포함하여 �
 
 
 
-###언어별 속도 및 성능 비교
+### 언어별 속도 및 성능 비교
 
  * Fortran은 Column, C/C++은 Row 방식으로 메모리에  정렬이 된다. 그렇기 때문에  C/C++에서 BLAS, LAPACK 함수를 호출하면 뒤집어야한다.
    그 때문에 약간의 속도 차이가 생긴다.
